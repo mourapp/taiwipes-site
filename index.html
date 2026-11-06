@@ -46,7 +46,7 @@
 <body>
 <header>
   <img src="assets/logo-header.png" alt="TAI WIPES — oral mouth wipes" style="height:64px;width:auto">
-  <nav><a href="#what">What it is</a><a href="#flavors">Flavors</a><a href="#how">How it works</a><a href="#join">Join the list</a></nav>
+  <nav><a href="#what">What it is</a><a href="#flavors">Flavors</a><a href="#how">How it works</a><a href="#join">Join the list</a><a href="#preorder">Pre-order</a></nav>
 </header>
 
 <div class="hero">
@@ -54,7 +54,8 @@
     <h1>A clean, fresh mouth — anywhere.</h1>
     <p>Tai Wipes are oral mouth wipes that come in <strong>one resealable pack with many soft wipes inside</strong>. Pop the lid, take one out, and freshen up after coffee, after a meal, on a plane, or before you walk into the room.</p>
     <a class="btn" href="#join">Join the early list</a>
-    <p class="note">Coming soon — Tai Wipes is in development now. Join the list and be first to know when it launches.</p>
+    <a class="btn" href="#preorder" style="background:#fff;color:var(--green);border:2px solid var(--green);margin-left:10px">Pre-order</a>
+    <p class="note">Coming soon — Tai Wipes is in development now. Join the early list to hear launch news, or pre-order below to hold your place in the first run — for your store, or for yourself.</p>
   </div>
   <img src="assets/hero.jpg" alt="Tai Wipes Healthy Mouth resealable pack with a soft wipe coming out of the flip-top lid">
 </div>
@@ -96,6 +97,34 @@
   <p class="note">Tai Wipes is a cosmetic oral-care wipe. It cleans and freshens; it is not a medicine and does not replace brushing, flossing, or your dentist.</p>
 </section>
 
+<section id="preorder">
+  <h2>Pre-order Tai Wipes</h2>
+  <p class="lead">Two ways to get in on the first run. <strong>Stores and businesses</strong> can pre-order to carry Tai Wipes on their shelves. <strong>Individuals</strong> can pre-order packs for themselves. Fill out the short form and we will hold your place and reach out with the details as launch gets close.</p>
+  <div class="cards">
+    <div class="card c-mint"><h3>For stores &amp; businesses</h3><p>Carry Tai Wipes in your store, salon, gym, hotel, or shop. Tell us your business name, where you are, and about how many packs you would want to start with.</p></div>
+    <div class="card c-blue"><h3>For yourself</h3><p>Want your own packs the moment they are ready? Tell us which flavor you want and about how many packs, and we will save your spot in line.</p></div>
+  </div>
+  <form id="preform" action="mailto:themaporganization@gmail.com" method="post" enctype="text/plain" style="display:block;max-width:640px">
+    <p style="margin-bottom:12px"><label>I am pre-ordering as:<br>
+      <select name="preorder_type" required style="width:100%;padding:12px;border-radius:10px;border:1px solid #c9d8cf;font-size:16px;margin-top:6px">
+        <option value="store">A store / business that wants to carry Tai Wipes</option>
+        <option value="individual">An individual pre-ordering for myself</option>
+      </select></label></p>
+    <p style="margin-bottom:12px"><label>Your name<br><input type="text" name="name" required style="width:100%;padding:12px;border-radius:10px;border:1px solid #c9d8cf;font-size:16px;margin-top:6px"></label></p>
+    <p style="margin-bottom:12px"><label>Business name (stores only)<br><input type="text" name="business" style="width:100%;padding:12px;border-radius:10px;border:1px solid #c9d8cf;font-size:16px;margin-top:6px"></label></p>
+    <p style="margin-bottom:12px"><label>Email<br><input type="email" name="email" required style="width:100%;padding:12px;border-radius:10px;border:1px solid #c9d8cf;font-size:16px;margin-top:6px"></label></p>
+    <p style="margin-bottom:12px"><label>City &amp; state<br><input type="text" name="city_state" style="width:100%;padding:12px;border-radius:10px;border:1px solid #c9d8cf;font-size:16px;margin-top:6px"></label></p>
+    <p style="margin-bottom:12px"><label>Flavor you want<br>
+      <select name="flavor" style="width:100%;padding:12px;border-radius:10px;border:1px solid #c9d8cf;font-size:16px;margin-top:6px">
+        <option>Healthy Mouth</option><option>Whitening</option><option>Refresh</option><option>A mix</option>
+      </select></label></p>
+    <p style="margin-bottom:16px"><label>About how many packs?<br><input type="text" name="quantity" placeholder="For example: 12 packs, or 200 packs for my store" style="width:100%;padding:12px;border-radius:10px;border:1px solid #c9d8cf;font-size:16px;margin-top:6px"></label></p>
+    <button class="btn" type="submit">Send my pre-order</button>
+  </form>
+  <p id="prethanks" style="display:none;margin-top:16px;font-weight:700;color:var(--green)">Thank you — your pre-order is in. We will email you the details as launch approaches.</p>
+  <p class="note">Pre-orders are reservations for the first production run. Final prices, pack sizes, and ship dates will be confirmed by email before anything is charged.</p>
+</section>
+
 <footer>
   <img src="assets/logo-footer.png" alt="TAI WIPES — oral mouth wipes" style="height:74px;width:auto">
   <p style="margin-top:12px">Tai Wipes LLC • Hollywood, Florida • Contact: themaporganization@gmail.com</p>
@@ -104,6 +133,9 @@
 <script>
   document.getElementById('joinform').addEventListener('submit', function(){
     setTimeout(function(){ document.getElementById('thanks').style.display='block'; }, 300);
+  });
+  document.getElementById('preform').addEventListener('submit', function(){
+    setTimeout(function(){ document.getElementById('prethanks').style.display='block'; }, 300);
   });
 </script>
 </body>
